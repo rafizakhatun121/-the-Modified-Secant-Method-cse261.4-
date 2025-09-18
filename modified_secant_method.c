@@ -1,7 +1,6 @@
-//Vai ra amar sobai sober amol nama ai jaigai diben 
-//Shimanto
+//shimanto
 //Rafiza
-//Ratul
-//Rifat
+//RAtul
+//rifaft
 //safin
-//Susmita
+//susmita
