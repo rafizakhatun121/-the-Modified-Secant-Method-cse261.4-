@@ -97,6 +97,6 @@ double secant(double x0, double x1, double error_limit, int max_iter) {
 }
 
 
-// rifaft
+// rifat
 // safin
 // susmita
