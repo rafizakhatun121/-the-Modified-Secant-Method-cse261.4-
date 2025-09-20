@@ -1,5 +1,8 @@
 
-# Section 1: Header Files and Function Definition
+
+# explanation :
+
+#Section 1: Header Files and Function Definition
 
 This section includes the necessary libraries and defines the test function  
 \( f(x) = e^x - 3x \) whose root we want to find.
