@@ -97,7 +97,7 @@ double secant(double x0, double x1, double error_limit, int max_iter) {
 }
 
 
-// rifaft
+// rifat
 // safin
 // Section 5: User Input for Modified Secant Method
 // This section takes user input for Modified Secant method parameters.
