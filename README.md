@@ -1,3 +1,25 @@
+
+# Section 1: Header Files and Function Definition
+
+This section includes the necessary libraries and defines the test function  
+\( f(x) = e^x - 3x \) whose root we want to find.
+
+```c
+// Section 1: Header Files and Function Definition
+// This section includes necessary libraries and defines the function f(x)
+// whose root we want to find.
+
+#include <stdio.h>
+#include <math.h>
+
+// Test function: f(x) = e^x - 3x
+double f(double x)
+{
+    return exp(x) - 3 * x;
+}
+#section 2:Modified Secant Method Function
+// This section implements the Modified Secant method using one initial guess,
+// a small delta, and stops when the error < error_limit or max iterations are reached.
 # Modified Secant Method in C
 
 This section implements the **Modified Secant Method** for root finding.  
