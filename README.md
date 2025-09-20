@@ -1,7 +1,7 @@
 
 
 # explanation :
-# 🔢 Root Finding in C: Modified Secant vs Standard Secant Method
+# Root Finding in C: Modified Secant vs Standard Secant Method
 
 This project demonstrates the implementation of **Modified Secant Method** and **Standard Secant Method** in C, applied to the nonlinear test function:
 
@@ -13,7 +13,7 @@ The goal is to approximate the root of the function using iterative numerical me
 
 ---
 
-## 📂 Project Structure
+## explanation:
 
 
 #Section 1: Header Files and Function Definition
