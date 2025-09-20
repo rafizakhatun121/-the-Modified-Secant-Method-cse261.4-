@@ -97,14 +97,13 @@ double secant(double x0, double x1, double error_limit, int max_iter) {
 }
 
 
-// rifat
-// Section 4: Variable Declarations
-// This section declares all variables needed for user input and method calls.
-int main() {
-    double x0_mod, delta, error_limit;
-    double x0_sec, x1_sec;
-    int max_iter;
-
-    printf("Comparing Modified Secant and Standard Secant Methods for f(x) = e^x - 3x\n");
+// rifaft
 // safin
+// Section 5: User Input for Modified Secant Method
+// This section takes user input for Modified Secant method parameters.
+    printf("\nModified Secant Method Input:\n");
+    printf("Enter initial guess x0: "); scanf("%lf", &x0_mod);
+    printf("Enter delta (small value, e.g., 0.01): "); scanf("%lf", &delta);
+    printf("Enter error limit: "); scanf("%lf", &error_limit);
+    printf("Enter maximum iterations: "); scanf("%d", &max_iter);
 // susmita
