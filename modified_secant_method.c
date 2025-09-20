@@ -1,6 +1,5 @@
-//shimanto
-// SHIMANTO
-
+// shimanto
+//  SHIMANTO
 
 // Section 1: Header Files and Function Definition
 // This section includes necessary libraries and defines the function f(x)
@@ -9,8 +8,9 @@
 #include <math.h>
 
 // Test function: f(x) = e^x - 3x
-double f(double x) {
-    return exp(x) - 3*x;
+double f(double x)
+{
+    return exp(x) - 3 * x;
 }
 
 // Rafiza
@@ -55,7 +55,7 @@ double modifiedSecant(double x0, double delta, double error_limit, int max_iter)
     printf("Modified Secant did not converge within max iterations.\n");
     return NAN;
 }
-//RAtul
-//rifaft
-//safin
-//susmita
+// RAtul
+// rifaft
+// safin
+// susmita
