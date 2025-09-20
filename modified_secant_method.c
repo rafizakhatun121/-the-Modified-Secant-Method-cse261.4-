@@ -106,6 +106,7 @@ int main() {
     int max_iter;
 
     printf("Comparing Modified Secant and Standard Secant Methods for f(x) = e^x - 3x\n");
+    
 // safin
 // Section 5: User Input for Modified Secant Method
 // This section takes user input for Modified Secant method parameters.
