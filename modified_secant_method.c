@@ -115,4 +115,5 @@ int main() {
     printf("Enter delta (small value, e.g., 0.01): "); scanf("%lf", &delta);
     printf("Enter error limit: "); scanf("%lf", &error_limit);
     printf("Enter maximum iterations: "); scanf("%d", &max_iter);
-// susmita
+// susmita 
+//test
