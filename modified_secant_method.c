@@ -115,5 +115,14 @@ int main() {
     printf("Enter delta (small value, e.g., 0.01): "); scanf("%lf", &delta);
     printf("Enter error limit: "); scanf("%lf", &error_limit);
     printf("Enter maximum iterations: "); scanf("%d", &max_iter);
-// susmita 
-//test
+//susmita
+// Section 6: User Input for Standard Secant Method
+// This section takes user input for Standard Secant method and calls the function.
+    printf("\nStandard Secant Method Input:\n");
+    printf("Enter first guess x0: "); scanf("%lf", &x0_sec);
+    printf("Enter second guess x1: "); scanf("%lf", &x1_sec);
+
+    secant(x0_sec, x1_sec, error_limit, max_iter);
+
+    return 0;
+}
