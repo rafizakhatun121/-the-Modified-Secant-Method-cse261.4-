@@ -1,5 +1,5 @@
 
-// This section includes necessary libraries and defines the function f(x)
+// This section includes necessary libraries and defines the
 // whose root we want to find.
 #include <stdio.h>
 #include <math.h>
