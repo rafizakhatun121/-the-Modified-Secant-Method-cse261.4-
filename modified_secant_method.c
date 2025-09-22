@@ -1,7 +1,4 @@
 
-//  SHIMANTO
-
-// Section 1: Header Files and Function Definition
 // This section includes necessary libraries and defines the function f(x)
 // whose root we want to find.
 #include <stdio.h>
