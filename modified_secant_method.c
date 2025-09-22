@@ -2,16 +2,11 @@
 #include <stdio.h>
 #include <math.h>
 
-
 double f(double x)
 {
     return exp(x) - 3 * x;
 }
 
-// Rafiza
-//  Section 2: Modified Secant Method Function
-//  This section implements the Modified Secant method using one initial guess,
-//  a small delta, and stops when the error < error_limit or max iterations are reached.
 double modifiedSecant(double x0, double delta, double error_limit, int max_iter)
 {
     int iter = 0;
