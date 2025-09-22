@@ -103,5 +103,5 @@ int main() {
 
     secant(x0_sec, x1_sec, error_limit, max_iter);
 
-    return 0;
+return 0;
 }
