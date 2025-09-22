@@ -45,11 +45,7 @@ double modifiedSecant(double x0, double delta, double error_limit, int max_iter)
     printf("Modified Secant did not converge within max iterations.\n");
     return NAN;
 }
-// RAtul
-//Ratul
-// Section 3: Standard Secant Method Function
-// This section implements the Standard Secant method using two initial guesses.
-// It stops when error < error_limit or max iterations are reached.
+
 double secant(double x0, double x1, double error_limit, int max_iter) {
     int iter = 0;
     double x2;
