@@ -1,9 +1,8 @@
 
-// whose root we want to find.
 #include <stdio.h>
 #include <math.h>
 
-// Test function: f(x) = e^x - 3x
+
 double f(double x)
 {
     return exp(x) - 3 * x;
