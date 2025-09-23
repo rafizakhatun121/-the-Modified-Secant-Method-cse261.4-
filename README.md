@@ -90,21 +90,7 @@ double modifiedSecant(double x0, double delta, double error_limit, int max_iter)
     printf("Modified Secant did not converge within max iterations.\n");
     return NAN;
 }  
-## 🔄 Modified Secant Method – Flowchart
 
-```mermaid
-flowchart TD
-    A[Start] --> B[Input x0, δ, error_limit, max_iter]
-    B --> C[Compute f(x0) and f(x0 + δ·x0)]
-    C --> D{Is f(x0+δ·x0) - f(x0) = 0?}
-    D -->|Yes| E[Stop: Division by Zero]
-    D -->|No| F[Compute x1 = x0 - (f(x0)·δ·x0)/(f(x0+δ·x0)-f(x0))]
-    F --> G[Error = |x1 - x0|]
-    G --> H{Error < error_limit?}
-    H -->|Yes| I[Root Found -> Print x1]
-    H -->|No| J{Iterations < max_iter?}
-    J -->|No| K[Stop: Did not converge]
-    J -->|Yes| L[Set x0 = x1, Repeat Loop]
 
 ##Standard Secant Method Function  :
 double secant(double x0, double x1, double error_limit, int max_iter) {
@@ -142,21 +128,7 @@ double secant(double x0, double x1, double error_limit, int max_iter) {
     printf("Secant did not converge within max iterations.\n");
     return NAN;
 } 
-## 🔄 Standard Secant Method – Flowchart
 
-```mermaid
-flowchart TD
-    A[Start] --> B[Input x0, x1, error_limit, max_iter]
-    B --> C[Compute f(x0), f(x1)]
-    C --> D{Is f(x1) - f(x0) = 0?}
-    D -->|Yes| E[Stop: Division by Zero]
-    D -->|No| F[Compute x2 = x1 - f(x1)·(x1-x0)/(f(x1)-f(x0))]
-    F --> G[Error = |x2 - x1|]
-    G --> H{Error < error_limit?}
-    H -->|Yes| I[Root Found -> Print x2]
-    H -->|No| J{Iterations < max_iter?}
-    J -->|No| K[Stop: Did not converge]
-    J -->|Yes| L[Set x0 = x1, x1 = x2, Repeat Loop]
 
 ## collects input from the user and executes both methods for comparison:
 int main() {
@@ -184,70 +156,31 @@ int main() {
 
     return 0;
 }
-# Comparing Modified Secant and Standard Secant Methods for f(x) = e^x - 3x:
 
-Modified Secant Method Input:
+
+
+Comparing Modified Secant and Standard Secant Methods for f(x) = e^x - 3x
+
+--- Modified Secant Method Input ---
 Enter initial guess x0: 1
 Enter delta (small value, e.g., 0.01): 0.01
-Enter error limit: 0.0001
+Enter error limit (e.g., 1e-4): 0.0001
 Enter maximum iterations: 10
 
-Modified Secant Method:
-Iter       x            f(x)          Error
+=== Modified Secant Method ===
+Iter	   x		 f(x)		 Error
 --------------------------------------------------
-1     0.652315     -0.021379     0.032315
-2     0.619061     -0.000056     0.033254
-Root found near x = 0.619061 after 2 iterations
+1	 0.652315	 -0.021379	 0.347685
+2	 0.619061	 -0.000056	 0.033254
+Root found near x = 0.619061 after 2 iterations (Modified Secant)
 
+--- Standard Secant Method Input ---
+Enter first guess x0: 0.5
+Enter second guess x1: 1.0
 
-# 🔄 Modified Secant Method
-
-This repository contains the **Modified Secant Method** steps and its **flowchart** implemented using Markdown + Mermaid.
-
----
-
-## 📌 Steps (Table Form)
-
-| Step | Action                                                                 |
-|------|------------------------------------------------------------------------|
-| 1    | Start                                                                  |
-| 2    | Input initial guess `x0`, perturbation factor `δ`, tolerance `error_limit`, and maximum iterations `max_iter`. |
-| 3    | Compute `f(x0)` and `f(x0 + δ·x0)`.                                    |
-| 4    | If denominator `f(x0+δ·x0) - f(x0) = 0` → **Stop** (Division by Zero). |
-| 5    | Compute next approximation: `x1 = x0 - (f(x0)·δ·x0) / (f(x0+δ·x0) - f(x0))`. |
-| 6    | Calculate error: `error = |x1 - x0|`.                                  |
-| 7    | If `error < error_limit` → **Root found**, Stop.                       |
-| 8    | If iteration count < `max_iter` → Set `x0 = x1` and **repeat from Step 3**. |
-| 9    | Else → **Stop** (Method did not converge within given iterations).     |
-
----
-
-## 📌 Flowchart (Mermaid)
-
-```mermaid
-flowchart TD
-    A([Start]) --> B[Input x0, δ, error_limit, max_iter]
-    B --> C[Compute f(x0) and f(x0 + δ·x0)]
-    C --> D{Is f(x0+δ·x0) - f(x0) = 0?}
-    D -->|Yes| E[Stop: Division by Zero]
-    D -->|No| F[Compute x1 = x0 - (f(x0)·δ·x0)/(f(x0+δ·x0)-f(x0))]
-    F --> G[Error = |x1 - x0|]
-    G --> H{Error < error_limit?}
-    H -->|Yes| I([Root Found → Print x1])
-    H -->|No| J{Iterations < max_iter?}
-    J -->|No| K([Stop: Did not converge])
-    J -->|Yes| L[Set x0 = x1, Repeat Loop]
-    L --> C
-
- 
-
-
-
-	​
-
- 
-
-
-
-
-
+=== Standard Secant Method ===
+Iter	   x0		 x1		 f(x1)		 Error
+-----------------------------------------------------------
+1	 0.500000	 1.000000	 -0.281719	 0.157250
+2	 1.000000	 0.842750	 -0.002135	 0.157250
+Root found near x = 0.842750 after 2 iterations (Standard Secant)
