@@ -141,7 +141,23 @@ double secant(double x0, double x1, double error_limit, int max_iter) {
 
     printf("Secant did not converge within max iterations.\n");
     return NAN;
-}
+} 
+## 🔄 Standard Secant Method – Flowchart
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Input x0, x1, error_limit, max_iter]
+    B --> C[Compute f(x0), f(x1)]
+    C --> D{Is f(x1) - f(x0) = 0?}
+    D -->|Yes| E[Stop: Division by Zero]
+    D -->|No| F[Compute x2 = x1 - f(x1)·(x1-x0)/(f(x1)-f(x0))]
+    F --> G[Error = |x2 - x1|]
+    G --> H{Error < error_limit?}
+    H -->|Yes| I[Root Found -> Print x2]
+    H -->|No| J{Iterations < max_iter?}
+    J -->|No| K[Stop: Did not converge]
+    J -->|Yes| L[Set x0 = x1, x1 = x2, Repeat Loop]
+
 ## collects input from the user and executes both methods for comparison:
 int main() {
     double x0_mod, delta, error_limit;
