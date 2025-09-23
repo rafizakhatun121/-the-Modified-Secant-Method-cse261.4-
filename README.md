@@ -37,7 +37,7 @@ double f(double x)
 # Modified Secant Method Function:
 // This section implements the Modified Secant method using one initial guess,
 // a small delta, and stops when the error < error_limit or max iterations are reached.
-# Modified Secant Method in C
+# Modified Secant Method in C:
 
 This section implements the **Modified Secant Method** for root finding.  
 It requires:
@@ -152,29 +152,20 @@ int main() {
 
     return 0;
 }
-# Root Finding in C: Modified Secant vs Standard Secant Method
+Comparing Modified Secant and Standard Secant Methods for f(x) = e^x - 3x
 
-This project implements **Modified Secant Method** and **Standard Secant Method** in C to approximate the root of the nonlinear function:
+Modified Secant Method Input:
+Enter initial guess x0: 1
+Enter delta (small value, e.g., 0.01): 0.01
+Enter error limit: 0.0001
+Enter maximum iterations: 10
 
-\[
-f(x) = e^x - 3x
-\]
-
----
-
-## Section 1: Header Files and Function Definition
-
- Code:
-```c
-#include <stdio.h>
-#include <math.h>
-
-// Test function: f(x) = e^x - 3x
-double f(double x) {
-    return exp(x) - 3 * x;
-}
-
-
+Modified Secant Method:
+Iter       x            f(x)          Error
+--------------------------------------------------
+1     0.652315     -0.021379     0.032315
+2     0.619061     -0.000056     0.033254
+Root found near x = 0.619061 after 2 iterations
 
 
  
