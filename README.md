@@ -1,6 +1,6 @@
 
 
-# explanation :
+# Explanation :
 # Root Finding in C: Modified Secant vs Standard Secant Method
 
 This project demonstrates the implementation of **Modified Secant Method** and **Standard Secant Method** in C, applied to the nonlinear test function:
@@ -13,7 +13,7 @@ The goal is to approximate the root of the function using iterative numerical me
 
 ---
 
-## explanation:
+## Explanation:
 
 
 # Header Files and Function Definition:
@@ -37,7 +37,7 @@ double f(double x)
 # Modified Secant Method Function:
 // This section implements the Modified Secant method using one initial guess,
 // a small delta, and stops when the error < error_limit or max iterations are reached.
-# Modified Secant Method in C:
+## Modified Secant Method in C:
 
 This section implements the **Modified Secant Method** for root finding.  
 It requires:
@@ -52,7 +52,7 @@ The method iteratively updates the root approximation until either:
 
 ---
 
-# Function Implementation:
+## Function Implementation:
 
 
 // Modified Secant Method Implementation
@@ -89,8 +89,24 @@ double modifiedSecant(double x0, double delta, double error_limit, int max_iter)
 
     printf("Modified Secant did not converge within max iterations.\n");
     return NAN;
-} 
-# Standard Secant Method Function  :
+}  
+## 🔄 Modified Secant Method – Flowchart
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Input x0, δ, error_limit, max_iter]
+    B --> C[Compute f(x0) and f(x0 + δ·x0)]
+    C --> D{Is f(x0+δ·x0) - f(x0) = 0?}
+    D -->|Yes| E[Stop: Division by Zero]
+    D -->|No| F[Compute x1 = x0 - (f(x0)·δ·x0)/(f(x0+δ·x0)-f(x0))]
+    F --> G[Error = |x1 - x0|]
+    G --> H{Error < error_limit?}
+    H -->|Yes| I[Root Found -> Print x1]
+    H -->|No| J{Iterations < max_iter?}
+    J -->|No| K[Stop: Did not converge]
+    J -->|Yes| L[Set x0 = x1, Repeat Loop]
+
+##Standard Secant Method Function  :
 double secant(double x0, double x1, double error_limit, int max_iter) {
     int iter = 0;
     double x2;
@@ -126,7 +142,7 @@ double secant(double x0, double x1, double error_limit, int max_iter) {
     printf("Secant did not converge within max iterations.\n");
     return NAN;
 }
-# collects input from the user and executes both methods for comparison:
+## collects input from the user and executes both methods for comparison:
 int main() {
     double x0_mod, delta, error_limit;
     double x0_sec, x1_sec;
@@ -152,7 +168,7 @@ int main() {
 
     return 0;
 }
-Comparing Modified Secant and Standard Secant Methods for f(x) = e^x - 3x
+# Comparing Modified Secant and Standard Secant Methods for f(x) = e^x - 3x:
 
 Modified Secant Method Input:
 Enter initial guess x0: 1
