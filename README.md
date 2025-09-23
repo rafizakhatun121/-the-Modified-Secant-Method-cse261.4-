@@ -198,24 +198,47 @@ Iter       x            f(x)          Error
 1     0.652315     -0.021379     0.032315
 2     0.619061     -0.000056     0.033254
 Root found near x = 0.619061 after 2 iterations
-## 🔄 Modified Secant Method – Flowchart
 
-##  Modified Secant Method – Steps (Table Form)
+
+# 🔄 Modified Secant Method
+
+This repository contains the **Modified Secant Method** steps and its **flowchart** implemented using Markdown + Mermaid.
+
+---
+
+## 📌 Steps (Table Form)
 
 | Step | Action                                                                 |
 |------|------------------------------------------------------------------------|
 | 1    | Start                                                                  |
-| 2    | Input `x0`, δ (delta), error_limit, max_iter                           |
-| 3    | Compute `f(x0)` and `f(x0 + δ·x0)`                                     |
-| 4    | Check if `f(x0+δ·x0) - f(x0) = 0` → If yes, stop (Division by Zero)    |
-| 5    | Compute new approximation: `x1 = x0 - (f(x0)·δ·x0) / (f(x0+δ·x0) - f(x0))` |
-| 6    | Calculate error = `|x1 - x0|`                                          |
-| 7    | If error < error_limit → Root found, stop                              |
-| 8    | If iteration < max_iter → Set `x0 = x1` and repeat                     |
-| 9    | Else → Stop (Did not converge)                                         |
+| 2    | Input initial guess `x0`, perturbation factor `δ`, tolerance `error_limit`, and maximum iterations `max_iter`. |
+| 3    | Compute `f(x0)` and `f(x0 + δ·x0)`.                                    |
+| 4    | If denominator `f(x0+δ·x0) - f(x0) = 0` → **Stop** (Division by Zero). |
+| 5    | Compute next approximation: `x1 = x0 - (f(x0)·δ·x0) / (f(x0+δ·x0) - f(x0))`. |
+| 6    | Calculate error: `error = |x1 - x0|`.                                  |
+| 7    | If `error < error_limit` → **Root found**, Stop.                       |
+| 8    | If iteration count < `max_iter` → Set `x0 = x1` and **repeat from Step 3**. |
+| 9    | Else → **Stop** (Method did not converge within given iterations).     |
 
+---
 
- 
+## 📌 Flowchart (Mermaid)
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[Input x0, δ, error_limit, max_iter]
+    B --> C[Compute f(x0) and f(x0 + δ·x0)]
+    C --> D{Is f(x0+δ·x0) - f(x0) = 0?}
+    D -->|Yes| E[Stop: Division by Zero]
+    D -->|No| F[Compute x1 = x0 - (f(x0)·δ·x0)/(f(x0+δ·x0)-f(x0))]
+    F --> G[Error = |x1 - x0|]
+    G --> H{Error < error_limit?}
+    H -->|Yes| I([Root Found → Print x1])
+    H -->|No| J{Iterations < max_iter?}
+    J -->|No| K([Stop: Did not converge])
+    J -->|Yes| L[Set x0 = x1, Repeat Loop]
+    L --> C
+
  
 
 
