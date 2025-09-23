@@ -198,6 +198,21 @@ Iter       x            f(x)          Error
 1     0.652315     -0.021379     0.032315
 2     0.619061     -0.000056     0.033254
 Root found near x = 0.619061 after 2 iterations
+## 🔄 Modified Secant Method – Flowchart
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Input x0, δ, error_limit, max_iter]
+    B --> C[Compute f(x0) and f(x0 + δ·x0)]
+    C --> D{Is f(x0+δ·x0) - f(x0) = 0?}
+    D -->|Yes| E[Stop: Division by Zero]
+    D -->|No| F[Compute x1 = x0 - (f(x0)·δ·x0)/(f(x0+δ·x0) - f(x0))]
+    F --> G[Error = |x1 - x0|]
+    G --> H{Error < error_limit?}
+    H -->|Yes| I[Root Found -> Print x1]
+    H -->|No| J{Iterations < max_iter?}
+    J -->|No| K[Stop: Did not converge]
+    J -->|Yes| L[Set x0 = x1, Repeat Loop]
 
 
  
