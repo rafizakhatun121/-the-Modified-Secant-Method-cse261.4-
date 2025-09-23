@@ -152,6 +152,30 @@ int main() {
 
     return 0;
 }
+# Root Finding in C: Modified Secant vs Standard Secant Method
+
+This project implements **Modified Secant Method** and **Standard Secant Method** in C to approximate the root of the nonlinear function:
+
+\[
+f(x) = e^x - 3x
+\]
+
+---
+
+## Section 1: Header Files and Function Definition
+
+ Code:
+```c
+#include <stdio.h>
+#include <math.h>
+
+// Test function: f(x) = e^x - 3x
+double f(double x) {
+    return exp(x) - 3 * x;
+}
+
+
+
 
  
  
